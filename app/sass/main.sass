@@ -1,0 +1,258 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	background: url(../img/bg_shadow.jpg) no-repeat center fixed
+	background-size: cover
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+a 
+	color: #1698d9
+	border-bottom: 1px dashed #1698d9
+	&:hover
+		text-decoration: none
+		color: #1698d9
+p
+	font-family: "TrebuchetMS", sans-serif
+	margin: 0
+
+.h2
+	margin: 0
+
+
+.wrap_cat
+	padding: 5px 0
+
+.h1 
+	font-size: 36px
+	font-family: "Exo2", sans-serif
+	text-align: center
+	color: #fff
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.mainbox
+	display: flex
+	align-items: center
+	justify-content: center
+	.box_cat
+		color: #000
+		flex-basis: 320px
+		height: 480px
+		margin: 0 40px
+		flex-shrink: 0
+		flex-grow: 0
+		cursor: pointer
+		.desc
+			font-family: "TrebuchetMS", sans-serif
+			font-size: 13px
+			color: #fff
+			text-align: center
+		.desc__yellow
+			color: #ffff66
+		.cat_inner
+			border-radius: 7px
+			position: relative
+			overflow: hidden
+			width: 100%
+			height: 100%
+			margin-bottom: 10px
+			padding: 20px 35px
+			img
+				width: 350px
+				height: auto
+				position: absolute
+				bottom: -80px
+				left: -35px
+			.number
+				width: 80px
+				height: 80px
+				border-radius: 50%
+				position: absolute
+				text-align: center
+				bottom: 10px
+				right: 10px
+				color: #fff
+				font-family: "TrebuchetMS", sans-serif
+				padding-top: 10px
+				.p1
+					font-size: 42px
+					color: #fff
+					line-height: 1
+				.p2
+					font-size: 21px
+					color: #fff
+					line-height: 1
+			.p1
+				font-size: 16px
+				color: #666
+			.p2
+				font-size: 24px
+				color: #000
+				font-weight: bold
+			.p3
+				font-size: 14px
+				color: #666
+				line-height: 1.3
+			.h2
+				font-size: 48px
+				color: #000
+				font-weight: bold
+				line-height: 1.2
+
+	.box_cat_borderblue
+		border-right: 3px solid #1698d9
+		border-bottom: 3px solid #1698d9
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 3px
+			height: 1000px
+			left: 0px
+			background: #1698d9
+			z-index: 20
+			top: 26px
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 3px
+			right: -27px
+			top: 0
+			background: #1698d9
+		.border_custom_blue
+			&::before
+				content: ''
+				position: absolute
+				width: 1100%
+				height: 1100%
+				top: 7px
+				right: -500%
+				transform-origin: 46% 0
+				transform: rotate(-45deg)
+				z-index: -1
+				background: #fff
+				border: 3px solid #1698d9
+		.number_blue
+			background: #1698d9
+	.box_cat_borderred
+		border-right: 3px solid #d91667
+		border-bottom: 3px solid #d91667
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 3px
+			height: 1000px
+			left: 0px
+			background: #d91667
+			z-index: 20
+			top: 26px
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 3px
+			right: -27px
+			background: #d91667
+			top: 0
+		.border_custom_red
+			&::before
+				content: ''
+				position: absolute
+				width: 1100%
+				height: 1100%
+				top: 7px
+				right: -500%
+				transform-origin: 46% 0
+				transform: rotate(-45deg)
+				z-index: -1
+				background: #fff
+				border: 3px solid #d91667
+
+		.number_red
+			background: #d91667
+	.box_cat_bordergrey
+		border-right: 3px solid #b3b3b3
+		border-bottom: 3px solid #b3b3b3
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 3px
+			height: 1000px
+			left: 0px
+			background: #b3b3b3
+			z-index: 20
+			top: 26px
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 3px
+			right: -27px
+			background: #b3b3b3
+			top: 0
+		.border_custom_grey
+			.p1, .p2, .p3, .h2
+				color: #b3b3b3
+			&::before
+				content: ''
+				position: absolute
+				width: 1100%
+				height: 1100%
+				top: 7px
+				right: -500%
+				transform-origin: 46% 0
+				transform: rotate(-45deg)
+				z-index: -1
+				background: #fff
+				border: 3px solid #b3b3b3
+			&::after
+				content: ''
+				position: absolute
+				width: 1100%
+				height: 1100%
+				top: 7px
+				right: -500%
+				transform-origin: 46% 0
+				transform: rotate(-45deg)
+				z-index: 1
+				background: #b3b3b3
+				border: 3px solid #b3b3b3
+				opacity: 0.4
+			.number_grey
+				background: #b3b3b3
+	
+
+@import "media" 
